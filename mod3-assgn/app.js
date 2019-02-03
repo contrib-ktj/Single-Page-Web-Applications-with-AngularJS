@@ -46,7 +46,7 @@ function NarrowItDownController(MenuSearchService) {
 
 function foundItems (){
   return {
-    templateUrl:'/loader/itemsloaderindicator.template.html',
+    templateUrl:'foundItemsTemplate.html',
     scope : {
       items: '<',
       remove: '&method'
