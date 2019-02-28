@@ -27,6 +27,7 @@
 			url: '/items/{catId}',
 			templateUrl: 'src/menuapp/templates/items.state.template.html',
     		controller: 'categoryItemsController as categoryItems',
+    		params: {	categoryName:null },
     		resolve: {
       		items: ['$stateParams', 'MenuDataService',
             function ($stateParams, MenuDataService) {

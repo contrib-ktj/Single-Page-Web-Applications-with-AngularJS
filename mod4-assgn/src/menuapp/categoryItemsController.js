@@ -5,11 +5,11 @@ angular.module('MenuApp')
 .controller('categoryItemsController', categoryItemsController);
 
 // 'item' is injected through state's resolve
-categoryItemsController.$inject = ['items']
-function categoryItemsController(items) {
+categoryItemsController.$inject = ['items','$stateParams']
+function categoryItemsController(items,$stateParams) {
   var categoryItems = this;
   categoryItems.items=items;
-  //categoryItems.category=category;
+  categoryItems.category=$stateParams.categoryName;
 }
 
 })();
